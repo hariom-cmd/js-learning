@@ -7,3 +7,10 @@ hariom = 24;                    // worst practice to declare variable like this
 
 // A tabular way to show all variables
 console.table([birthYear,age,fullName,hariom]);
+
+
+/*
+NOTE: prefer not to use VAR data type
+because of issue in block and functional scope
+
+*/
