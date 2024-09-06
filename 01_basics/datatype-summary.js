@@ -55,3 +55,28 @@ console.log(typeof myFunction); // return type is function object
 console.log(typeof myObj); // object
 console.log(typeof heros); // object
 
+
+// *************************** Memory Types ***************
+// Stack(Primitive) => gives copy, Heap(Non-Primitive) => gives reference
+
+// stack memory
+let myCollegeName = "NITK-Surathkal";
+let anotherCollegeName = myCollegeName;
+
+anotherCollegeName = "PIET";
+
+console.log(myCollegeName);
+console.log(anotherCollegeName);
+
+// heap memory given to non-primitive type
+let userOne = {
+    email : "userOne@gmai.com", // email is an object and goes to heap memory
+    upi : "userOne@ybl" // upi is an object and goes to heap memory
+}
+
+let userTwo = userOne; // userOne and userTwo now referencing to the same memory block
+
+userTwo.email = "harioSaini@gmail.com"; // this lead to change in heap memory
+
+console.log(userOne.email);
+console.log(userTwo.email);
