@@ -26,6 +26,7 @@ const jsUser = { // object k andr keys as a string store hoti h agr hm apne aap 
 // 1. 
 // console.log(jsUser.email);
 // console.log(jsUser["email"]);
+
 // console.log(jsUser.full name);// we can't access "Full nane" because in object its a string
 // the only way to access is access using square bracket
 // console.log(jsUser["full name"]);
