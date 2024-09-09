@@ -81,8 +81,43 @@ const obj3 = {5: "a", 6: "b"}; // In 3no objects ko obj 4 me copy kr do
 
 
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser)); // output value ka data type h array Or Jb array return hora h to hm ispe loop lga skte h ya or koi kaam krva skte h By Accessing Index
-console.log(Object.values(tinderUser)); // output value ka data type h array Or Jb array return hora h to hm ispe loop lga skte h ya or koi kaam krva skte h By Accessing Index
-console.log(Object.entries(tinderUser)); // output is array of [key:  vlaue] format
-console.log(tinderUser.hasOwnProperty('isLoggedIn')); // ye check krta h ki object k pas ye property h ya nhi
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser)); // output value ka data type h array Or Jb array return hora h to hm ispe loop lga skte h ya or koi kaam krva skte h By Accessing Index
+// console.log(Object.values(tinderUser)); // output value ka data type h array Or Jb array return hora h to hm ispe loop lga skte h ya or koi kaam krva skte h By Accessing Index
+// console.log(Object.entries(tinderUser)); // output is array of [key:  vlaue] format
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); // ye check krta h ki object k pas ye property h ya nhi
+
+
+
+// Last Video on objects
+
+// Destructuring of an object
+
+const course = {
+    courseName: "js in hindi",
+    price: "999",
+    courseInstructor: "hariom"
+}
+
+
+//console.log(course.courseInstructor); // => fetching vpurseInstructor every time like this is tidies when we using this frequently. So we destructure it
+
+// Destructuring Syntax: {propertyName: AliseName} = ObjectName;
+const {courseInstructor: instructor} = course; // hmne course me se courseInstructor fetch kiya or ab hm direct courseInstructoe se hi courseInstructor ko use kr skte h (Or hm use Alise bhi kr skte h)
+console.log(instructor);
+
+
+/* how to use Destructuring in react
+    // Agr hm Desture use nhi krte to {company} ----> ki jgh (props.company) us krna pdta 
+    const navbar = ({company}) => {
+
+        };
+    
+    navbar(company = "hitesh")
+*/
+
+
+
+
+
+
