@@ -116,6 +116,7 @@ console.log(instructor);
     navbar(company = "hitesh")
 */
 
+// finish basics
 
 
 
