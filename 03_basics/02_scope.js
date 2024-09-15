@@ -69,6 +69,8 @@ addOne(4);
 // but here function declaration must be first than call/Execute
 // else give ERROR
 // is concept ko khte h Hoisting
+
+//addTwo(5);
 const addTwo = function(num){
     return num + 2;
 }
