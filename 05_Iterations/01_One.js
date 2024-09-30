@@ -2,7 +2,7 @@
 // break and continue statement
 
 // for of loop used for iterate over Arrays and objects
-
+// iterators are => obejct, arrays, strings
 const arr = [1,2,3,4,5,6];
 
 for(const num of arr){
@@ -15,7 +15,7 @@ for(const greet of greetings){
 }
 
 
-// Maps  => Stores unique Values
+// Maps  => Stores unique Values AND map is also an Object
 
 const map = new Map();
 map.set('IN',"India");
