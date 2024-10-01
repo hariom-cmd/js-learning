@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    
+</body>
+
+<script>
+    const div = document.createElement('div');
+    console.log(div); // is div k andr properties sari available h but vo set nhi h let set some these properties
+
+    // adding properties on this div
+
+    // ye className and id attributes toh by Default available hote h
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 + 1);
+
+    // lets make some our choice attributes (BY using setAttribute)
+    div.setAttribute("title", "generated title"); // take input in key value form ("Name_of_Attribute", "Value_of_the_Attribute")
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+    // Abhi tk hmne element bna liya attribute set kr liye style lga diya but ye abhi memory m h page pr nhi aya MEANS page pr attach nhi hua
+    // Now lets, attach this div to the page
+    
+    // div.innerHTML = "Hello My Friend. This is my first element create from DOM"; // put some content inside the div (ye innerHTML overwrite krta h content PHLE content leke ayega fr use vha jake rewrite krega ROUND TRIP lgta h isko)
+
+    const addText = document.createTextNode("Hello My Friend. This is my first element create from DOM"); // is se hm phle create krenge or direct inject kr denge text node ko
+    div.append(addText); // upr create hui text node or ye ab use append kr rha h
+    document.body.appendChild(div); // document ki body me jao pr vha pr 1 new chile node append kr do
+
+</script>
+
+</html>
+
+
+// Here we learn how to create this node list

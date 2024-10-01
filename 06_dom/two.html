@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    const parentElement = document.querySelector('.parent');  // Is threeke se hm parent element ko access krte h
+    // console.log(parentElement.children); // or ese hm pta lga skte h ki parent k and kitne childrens h AND it returns HTML collections
+    // console.log(parentElement.children[1].innerHTML); // Is se hm us children k andr ka content bhi dekh skte h
+
+    for(let i = 0; i < parentElement.children.length; i++){ // parentElement.children hm HTML collection return kregi us pr hm further operations kr skte h
+        //console.log(parentElement.children[i].innerHTML);
+    }
+
+    // lets do some styling
+    // parentElement.children[0].style.color = "orange";
+    // parentElement.children[1].style.color = "white";
+    // parentElement.children[2].style.color = "green";
+
+    // console.log(parentElement.firstElementChild); // Way to get first child of a parent
+    // console.log(parentElement.lastElementChild);  // Way to get last child of a parent
+
+    // how to get back to parent from child node
+    const dayOne = document.querySelector('.day'); // querySelector just give the very first target element, Hmne day child ko dayOne variable me le liya h ab is se parent tk ka safr ty krte h
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement); // this will tell the parent o the child
+    // console.log(dayOne.nextElementSibling); // this give the very next sibling
+
+    console.log("NODES: " , parentElement.childNodes); // ye hr 1 node element degi chaye comment ho, line break ho etc kuj bhi ho use as a node treat kregi (TREE like structure me DOM k)
+    
+</script>
+
+</html>
