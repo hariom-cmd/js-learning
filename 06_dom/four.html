@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    // Hmko new languages add krni h UL me kese kre? lets start
+    // phle 1 function bna lete h kyoki hme multiple languages add krni h
+    function addLanguages(langName){
+        const li = document.createElement('li'); // Ab 1 new element create kr lete h or usko 1 variable me store kr lete h
+        li.innerHTML = `${langName}`; // chlo element create ho gya ab is element m kuj daal to dete h, But ye element abhi hwa m h isko append krna pdega 
+        document.querySelector('.language').appendChild(li); // or append kha pr krna h "Language vali class me" so append child node
+    
+        // ye threeka thik h but optimie nhi h kyoki hr baar pura tree traverse krna pd rha h hr 1 child ko append krne k liye
+    
+    }
+    addLanguages("Python");
+    addLanguages("TypeScript");
+
+    // so lets do it with some optimiation
+    // isme pura tree traverse nhi krna pd rha 
+    // isme hmne li create kri or direct textNode insert kr di
+    function addLanguageOpti(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName)); // yha pr hmne new node create kri or usko direct append kr diya
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addLanguageOpti("Java");
+
+
+
+    // Editing these values
+    const secondLang = document.querySelector("li:nth-child(2)"); // yha secondLang me pura element hi uth k ara h i.e. <li>Javascript</li>
+    // secondLang.innerHTML = "Mojo"; // not optimie
+    const newli = document.createElement('li'); // hm kya kr rhe h 1 new element bnaya or usko upr vale jo purane vala h us se replace krenge
+    newli.textContent = "Ruby"; // is newly created element me kuj content dala
+    secondLang.replaceWith(newli); // or is new element ok purna vale element se replace kr diya
+
+
+    // second way
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.outerHTML = '<li>CPP</li>'; // hm pura tag/OuterHTML hi utha k la skte h
+
+
+    // now how to remove
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+    
+</script>
+
+</html>
