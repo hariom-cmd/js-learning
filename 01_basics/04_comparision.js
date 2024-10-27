@@ -16,7 +16,7 @@
 
 // console.log(null > 0);
 // console.log(null == 0);
-// console.log(null >= 0);
+// console.log(null >= 0); 
 
 /*  NOTE:-
     The reason is that an equality check == and comparision > < <= >= works differently

@@ -3,13 +3,16 @@ let score = "33abc";
 //console.log(typeof score);
 //console.log(typeof(score));
 
-let valueInNumber = Number(score);
+let valueInNumber = Number(score); // type conversion/casting
 //console.log(typeof valueInNumber);
 //console.log(valueInNumber);
 
 // "33" => directly converted in number
 // "33as" => not converted in number directly gives NaN
 // true => 1; false => 0
+// null => 0
+// undefined => NaN
+// "hariom" => NaN
 
 let isLoggedIn = 1; // if we pass EMPTY string it gives false value 
 
@@ -42,7 +45,7 @@ let negValue = -value;
 
 let str1 = "hariom";
 let str2 = " saini";
-let str3 = str1 + str2;
+let str3 = str1 + str2; // only addition NO subtraction
 
 console.log(str3);
 
@@ -55,4 +58,4 @@ console.log(str3);
 //console.log.apply(3 + 1 - 10 * 23 % 3); // do not use ths type of mess-up codes
 
 console.log(+true); // gives 1
-console.log(+""); 
+console.log(+"");   // gives 0

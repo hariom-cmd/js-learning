@@ -16,7 +16,7 @@ This means that the type of a variable is checked at runtime, not at compile tim
 // let userEmail; // => by default undefined
 
 
-// // symbol is used for uniqueness 
+// symbol is used for uniqueness 
 // const id = Symbol('123');
 // const anotherid = Symbol('123');
 // console.log(id === anotherid); // false (value is same but return type is different (return type is also a symbol))
@@ -51,7 +51,7 @@ const myFunction = function() {
     console.log("Hello World");
 } 
 
-console.log(typeof myFunction); // return type is function object 
+console.log(typeof myFunction); // return type is "function object" 
 console.log(typeof myObj); // object
 console.log(typeof heros); // object
 
