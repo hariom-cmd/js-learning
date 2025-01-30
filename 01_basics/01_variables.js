@@ -3,6 +3,8 @@ let age = 24;                   // Commonly used data type
 var fullName = "Hariom Saini";  // Never use this variable type
 hariom = 24;                    // worst practice to declare variable like this
 
+let firstName; // by defautl value is undefined
+
 //console.log(fullName);
 
 // A tabular way to show all variables
