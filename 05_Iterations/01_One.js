@@ -5,17 +5,17 @@
 // iterators are => obejct, arrays, strings
 const arr = [1,2,3,4,5,6];
 
-for(const num of arr){
+for(const num of arr){  // syntex of for..of : for(const iterator of object){}; ==> yha pr object broader term me use kiya ja rha h yeJS ka object nhi h ()iska mtlb h ki kis pr loop lgana h
     // console.log(num);
 }
 
 const greetings = "Hello World!";
-for(const greet of greetings){
+for(const greet of greetings){ // Object hona jruri nhi h Kuch bhi ho skta h LIKE String
     //console.log(`Each char is ${greet}`);
 }
 
 
-// Maps  => Stores unique Values AND map is also an Object
+// Maps  => Stores unique Values AND map is also an Object (Array jese hi hote h)
 
 const map = new Map();
 map.set('IN',"India");
@@ -32,16 +32,16 @@ for (const key of map) {
 
 // Destructuring Array 
 for (const [key,value] of map) { // maps are not iteratable so we can't use for-in loop
-    // console.log(key); // this line will output whole array in return => ['IN','India'] like
-    // console.log(key); // this line give output of keys
-    // console.log(value); // this line will give output for values
-    //console.log(key , ':-' , value); // 
+    // console.log(key); // this line will output whole array in return => ['IN','India'] like Before destructuring
+    // console.log(key); // this line give output of keys After Destructuring
+    // console.log(value); // this line will give output for values After Destructuring
+    //console.log(key , ':-' , value); // here keys and values are printing seperatly as we destructure the Array
 }
 
 
 
 
-// Is For of loop works on objects?
+// Is For of loop works on objects (Objects like : myObject = {} )?
 // Ans: NO, objects are NOT iteratable
 // following code will not work
 /*
@@ -70,6 +70,8 @@ const myObject = {
     swift: 'Swift by apple'
 };
 
+
+// to iterate over obejcts we use for...in loop (for...in use many places not for objects only)
 for(const key in myObject){
     //console.log(`${key} is Abbrivated for ${myObject[key]}`);
 }
@@ -89,19 +91,16 @@ for(const key in programmingLanguage){
 // NOTE: Map pr for-in loop nhi chla skte kyoki vo iteratble nhi hote
 // Even if we destructre it
 for (const [key,value] in map) { // maps are not iteratable so we can't use for-in loop
-    // console.log(key); // this line will output whole array in return => ['IN','India'] like
-    // console.log(key); // this line give output of keys
-    // console.log(value); // this line will give output for values
-    //  console.log(key , ':-' , value)
+    // console.log(key); // output is nothing
 }
 
 
 
-// For-each loop => hogher order function
+// For-each loop => higher order function
 
-const coding = ["js","rb","py","java","cpp"];
+const coding = ["js","rb","py","java","cpp"]; // forEach loop array ki hi 1 property h 
 
-// basic implementation
+// basic implementation (forEach me callback function pass krna hota h)
 coding.forEach( function (val){ // Call back function
     //console.log(val);
 } );
@@ -111,14 +110,21 @@ coding.forEach( (item) => {
     //console.log(item);
 } );
 
- // passing function reference as a parameter in forEach loop
+
+
+// passing function reference as a parameter in forEach loop
 //  function printMe(item){
 //     console.log(item);
 //  }
 
-//  coding.forEach(printMe);
+//  coding.forEach(printMe); // bs callback function ka reference dena h use execute nhi krna h ok
 
-coding.forEach( (item, index, arr) => {// first value for array Element,second value for array index, third value for complete array
+
+
+
+
+// first value for array Element,second value for array index, third value for complete array
+coding.forEach( (item, index, arr) => {
     //console.log(item, index, arr);
 } );
 

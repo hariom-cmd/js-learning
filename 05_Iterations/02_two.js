@@ -9,13 +9,13 @@ const coding = ["js", "ruby","java","python","cpp"];
 const values = coding.forEach( (val) => {
     console.log(val);
 } )
-console.log(values);   */
+console.log(values); // print undefine   */
 
 
 
-// to return something  use filter
+// to return something use filter (filter is also a property of the array)
 // const myNum = [1,2,3,4,,5,6,7,8,9,10];
-// const newNums = myNum.filter( (val) => val > 4 );
+// const newNums = myNum.filter( (val) => val > 4 ); // takes callback as an argument, filter values return krta h kisi condition k base pr
 // console.log(newNums);
 
 
@@ -50,15 +50,3 @@ const books = [
 const userBooks = books.filter( (bk) => bk.genre === 'History');
 
 console.log(userBooks);
-
-
-
-
-
-
-
-
-
-
-
-
