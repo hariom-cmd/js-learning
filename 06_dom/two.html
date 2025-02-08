@@ -16,10 +16,10 @@
 
 <script>
     const parentElement = document.querySelector('.parent');  // Is threeke se hm parent element ko access krte h
-    // console.log(parentElement.children); // or ese hm pta lga skte h ki parent k and kitne childrens h AND it returns HTML collections
+    // console.log(parentElement.children); // or ese hm pta lga skte h ki parent k andr kitne childrens h AND it returns HTML collections
     // console.log(parentElement.children[1].innerHTML); // Is se hm us children k andr ka content bhi dekh skte h
 
-    for(let i = 0; i < parentElement.children.length; i++){ // parentElement.children hm HTML collection return kregi us pr hm further operations kr skte h
+    for(let i = 0; i < parentElement.children.length; i++){ // parentElement.children hme HTML collection return krega or us pr hm further operations kr skte h
         //console.log(parentElement.children[i].innerHTML);
     }
 
@@ -28,8 +28,8 @@
     // parentElement.children[1].style.color = "white";
     // parentElement.children[2].style.color = "green";
 
-    // console.log(parentElement.firstElementChild); // Way to get first child of a parent
-    // console.log(parentElement.lastElementChild);  // Way to get last child of a parent
+    // console.log(parentElement.firstElementChild); // Way to get first child of a parent and gives full element like :- <div class="day">Monday</div>
+    // console.log(parentElement.lastElementChild);  // Way to get last child of a parent and gives full element like :- <div class="day">Monday</div>
 
     // how to get back to parent from child node
     const dayOne = document.querySelector('.day'); // querySelector just give the very first target element, Hmne day child ko dayOne variable me le liya h ab is se parent tk ka safr ty krte h
