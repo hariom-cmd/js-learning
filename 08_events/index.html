@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <ul id="images">
+        <!-- Never inject events directly inside the html because when application scales it cause many problem. like onclick="alert('A is clicked.')" -->
+        <!-- but react k andr ye kr skte h vo ek alg JS Library h. -->
+        <li><img width="200px" height="200px" src="https://images.pexels.com/photos/30311887/pexels-photo-30311887/free-photo-of-two-women-enjoying-art-exhibit-with-cambodian-sculptures.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="a" alt="a"></li>
+        <li><img width="200px" height="200px" src="https://images.pexels.com/photos/2763964/pexels-photo-2763964.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="b" alt="b"></li>
+        <li><img width="200px" height="200px" src="https://images.pexels.com/photos/27355710/pexels-photo-27355710/free-photo-of-processed-with-vsco-with-a6pro-preset.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="c" alt="c"></li>
+        <li><img width="200px" height="200px" src="https://images.pexels.com/photos/28262879/pexels-photo-28262879/free-photo-of-a-man-in-a-hat-sitting-on-a-chair.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="d" alt="d"></li>
+        <li><img width="200px" height="200px" src="https://images.pexels.com/photos/30717833/pexels-photo-30717833/free-photo-of-dramatic-ocean-view-with-moody-sky.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="e" alt="e"></li>
+        <li><img width="200px" height="200px" src="https://images.pexels.com/photos/30333485/pexels-photo-30333485/free-photo-of-statue-overlooking-berlin-tv-tower-on-foggy-day.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="f" alt="f"></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+
+
+
+<!-- JS k andr jitne bhi events hote h sare sequentialy he run hote h. JS is sequentialy run language. -->
+
+<script>
+    // document.getElementById('a').onclick = function () {           // do not use onclick because it give low features instead of this use Event Listners.
+    //     alert('Hello G!, First image is clicked.')
+    // }
+
+
+    // Best Approaches 
+    // addEventListner(typeOfEvent, Function, True/False); by default false (Ye false/true value event propogation k kaam ata h)
+    
+        // inke baare me study kro for good knowledge of JS events
+        // type, timestamp, preventDefault
+        // target, toElement, srcElement, currentTarget
+        // clientX, clientY, sreenX, screenY
+        // altKey, shiftKey, keyCodes
+
+
+
+    // What is event propogation?
+    // It has two context 1. Event bubbling(Default behaviour (false)) 2. Event Capturing(when true)
+    // Event Bubbling :- inside se outside ki trf move krna. Phle child element perform hoga fr parent element (Bottom se Top ki trf)
+    // Event Capturing :- bubbling ka ulta (Top se Bottom ki trf)
+
+    // Both events are usecase dependent
+
+                // document.getElementById('images').addEventListener( 'click' , function(e){
+                //     console.log('Clicked inside the Ul');
+                // }, false);
+
+                // document.getElementById('a').addEventListener( 'click' , function(e){
+                //     console.log('a clicked');
+                //     e.stopPropagation();
+                // }, false);
+
+                // document.getElementById('google').addEventListener('click',function(event) {
+                //     event.preventDefault();
+                //     event.stopPropagation();
+                //     console.log('Google Clicked');
+                // }, false);
+    
+
+
+    // Assignment to delete image when clicked
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);
+
+        console.log(e.target.tagName); // tagname gives the tagname in all caps
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode; 
+            removeIt.remove(); // method 1
+        }
+
+
+       
+        // removeIt.parentNode.removeChild(removeIt); //  method 2
+    })    
+
+</script>
+
+</html>
