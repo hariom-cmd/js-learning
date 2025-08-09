@@ -5,7 +5,7 @@ This means that the type of a variable is checked at runtime, not at compile tim
 
 
 // Primitive type
-// 7 types(Always call by value - copy is provided)
+// 7 types(Always call by value - copy is provided means if we are copying it from anywhere it gives a copy of that type not the reference)
 // => String, Number, Boolean,null, undefined, Symbol, bigInt
 
 // const score = 300;
@@ -34,6 +34,7 @@ This means that the type of a variable is checked at runtime, not at compile tim
 
 // reference type (Non-Premitive)
 
+// Return type of non-premitive type is always object
 // Web events, Browser events and Obejct master these topic to master in JS
 // Arrays, Objects, Functions
 
@@ -57,7 +58,7 @@ console.log(typeof heros); // object
 
 
 // *************************** Memory Types ***************
-// Stack(Primitive) => gives copy, Heap(Non-Primitive) => gives reference
+// Stack(for Primitive types) => gives copy, Heap(for Non-Primitive types) => gives reference
 
 // stack memory
 let myCollegeName = "NITK-Surathkal";
@@ -70,7 +71,7 @@ console.log(anotherCollegeName);
 
 // heap memory given to non-primitive type
 let userOne = {
-    email : "userOne@gmai.com", // email is an object and goes to heap memory
+    email : "userOne@gmail.com", // email is an object and goes to heap memory
     upi : "userOne@ybl" // upi is an object and goes to heap memory
 }
 

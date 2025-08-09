@@ -1,12 +1,13 @@
 let score = "33abc";
 
-//console.log(typeof score);
-//console.log(typeof(score));
+// console.log(typeof score);
+// console.log(typeof(score));
 
 let valueInNumber = Number(score); // type conversion/casting
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+console.log(typeof valueInNumber);
+console.log(valueInNumber);
 
+// for above conversion
 // "33" => directly converted in number
 // "33as" => not converted in number directly gives NaN
 // true => 1; false => 0
@@ -57,5 +58,5 @@ console.log(str3);
 //console.log(1 + 2 + "3");
 //console.log.apply(3 + 1 - 10 * 23 % 3); // do not use ths type of mess-up codes
 
-console.log(+true); // gives 1
+console.log(+true); // gives 1 confusing operations not prefered
 console.log(+"");   // gives 0

@@ -23,6 +23,8 @@ console.log(a);
 function one(){
     const username = "Hariom";
 
+
+    // Basic  idea about "closure" is that inner function can access outer function variables and fucntion
     function two(){
         const website = "Youtube";
         console.log(username);

@@ -62,7 +62,7 @@ const url = "https://hariom.com/hariom%20saini";
 console.log(url.replace('%20','-'));
 console.log(url.includes('%20'));
 
-console.log(gameName.split('-')); // its split whole string into an array based on the given character.
+console.log(gameName.split('-')); // its split whole string into an array of string based on the given character.
 
 
 

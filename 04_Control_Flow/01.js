@@ -22,7 +22,7 @@
 
 
 
-// How to check obe=ject is empty or not
+// How to check object is empty or not
 
 const emptyObject = {};
 

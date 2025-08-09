@@ -5,7 +5,7 @@ const user = {
     price: 999,
 
     welcomeMessage: function() {
-        console.log(`${this.username}, welcome to webdite.`);
+        console.log(`${this.username}, welcome to website.`);
         console.log(this);
     }
 }
@@ -40,8 +40,8 @@ chai();
 
 // normal function
 // const chai = function () {
-//     let username = "HariomGSaini";
-//     console.log(this.uusername);
+//     let username = "Hariom Saini";
+//     console.log(this.username); // normal function me hm "this" use this kr skte. Because ye current context object  k andr hi kaam kr  ha h ese function k andr ake use nhi kr skte.  Run krne or undefined output ayega
 // }
 
 // chai();
@@ -49,10 +49,9 @@ chai();
 
 // Arrow function
 // const chai =  () => {
-//     let username = "HariomGSaini";
+//     let username = "Hariom Saini";
 //     console.log(this); // give {} // find answer for both nomal and arrow function by we can't use this inside functions
 // }
-
 // chai();
 
 
@@ -69,10 +68,18 @@ const addTwo = (num1, num2) => {
 }
 console.log(addTwo(3,7));
 
-// Noe Implicit return Arrow Function
+// Now Implicit return Arrow Function
 
 const multTwo = (num1,num2) => (num1 * num2); // because function containing only one line it ise assumed that this is a retunr statement we not need to write RETURN keyword by self; 
 // Best practice is to wrap this inside () because sometime we need to return an object and object return in {username:"HAriom"} for and when we use {} fuction become explicit return type amd ask for retunr keyword and give error
 // so use () everytime. Very useful in REACT
 
 console.log(multTwo(2,3));
+
+
+
+
+/*
+INTERVIEW Question : what is the difference between normal function and arrow function in JS. Mainly for this keyword binding
+
+*/

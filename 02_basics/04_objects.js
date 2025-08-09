@@ -122,3 +122,13 @@ console.log(instructor);
 
 
 
+/*
+1. Singleton object
+Definition: An object where only one instance exists for the entire application.
+Key idea: No matter how many times you "access" it, you always get the same object reference.
+
+2. Non-singleton object
+Definition: An object that can have multiple independent instances.
+Key idea: Each time you create one, you get a new reference with its own separate state.
+
+*/

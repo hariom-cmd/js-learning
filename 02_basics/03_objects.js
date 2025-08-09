@@ -35,7 +35,7 @@ const jsUser = { // object k andr keys as a string store hoti h agr hm apne aap 
 
 // jsUser.email = "HariomSaini@gmail.com"; // we can over write value
 
-// Object.freeze(jsUser); // we can also freex entire object so that no one can manipulate value further
+// Object.freeze(jsUser); // we can also freeze entire object so that no one can manipulate value further
 // jsUser.email = "codeBlooded@gmail.com"; // NO updates
 
 // console.log(jsUser);
@@ -55,6 +55,7 @@ jsUser.greetingTwo = function() {
 
 console.log(jsUser.greeting());
 console.log(jsUser.greetingTwo());
+console.log(jsUser);
 
 
 

@@ -39,7 +39,7 @@ let newDate = new Date();
 
 // Important 
 
-
+// inside the tolocalstring() the first argument is internationalization you want to use.
 console.log(newDate.toLocaleString('default', {
     weekday: "long",
     month: "long",

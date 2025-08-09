@@ -13,18 +13,16 @@ let age = 23;
 let isLoggedIn = true;
 
 // ********* data types *********
-// number => 2^53
-// bigint
+// number => 2^53 (range)
+// bigint => not used in general
 // string => ""
 // boolen => true/false
 
 // interview qestion
 // null => standalone value (null is an object) ,  NULL is a representation for an empty value int spaceX = null; 0 != null becase is a Value
 
-
-
 // undefined
-// symbol=> for unique
+// symbol=> for uniqueness mostly used in REACT
 // object
 
 console.log(typeof null); 

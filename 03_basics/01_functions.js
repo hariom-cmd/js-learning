@@ -26,7 +26,7 @@ const result = addTwoNumbers(3,5); // Arguments
 
 
 function logInUserMessage(username = "JS"){ // default Value is JS
-    if(!username){ // Empty string/undefined ko Maan liay gya h ki vo false value
+    if(!username){ // Empty string/undefined ko Maan liya gya h ki vo false value
                    // !undefine => true , !"" => true
         console.log("Plese enter a username");
         return;
@@ -41,7 +41,7 @@ function logInUserMessage(username = "JS"){ // default Value is JS
 // let do some practice on REST Operator
 
 function calculateCartPrice(val1, val2, ...otherValues){// first two values goes to first two variables and rest all goes to rest parameter
-    return otherValues;
+    return otherValues; // the values inside the othervalues is of array 
 }
 
 //console.log(calculateCartPrice(200, 300, 400, 500, 600));
