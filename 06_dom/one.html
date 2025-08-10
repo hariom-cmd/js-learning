@@ -28,3 +28,58 @@
     </div>
 </body>
 </html>
+
+
+<!-- 
+In cosole if we do : 
+const title = documnet.getElemenetByid('title') // title now has title is we can manipulation
+
+title.textContent 
+title.innerHTML
+title.innerText 
+
+all above three give : 'DOM learning on chai aur code.' as return
+its seems all are doing same thing but there  is some difference lets talk about it.
+
+# innerText V/S innerContent V/S innerHTML
+   For this we add a <span> tag and make its display : none
+   
+   Just Observe the difference 
+   when we run title.innerText ==>  'DOM learning on chai aur code.'
+   when we run title.innerContent ==> 'DOM learning on chai aur code.hello beta g.'
+   when we run title.innerHTML ==> 'DOM learning on chai aur code. <span style="display: none;">hello beta g.</span>'
+
+
+# Query Selectors
+
+  1. querySelector()  
+  documnet.querySelector('h2') ==> give very first h2 OR whatever inside the selector.
+    <h2> Lorem ipsum dolor sit amet consectetur adipisicing. </h2> 
+
+  ==> to select by id pass '#tile'
+  ==> to select by className pass '.heading'
+  ==> we can also select by attribute name 
+      documnet.querySelector('input[type = "password"]')  
+      
+
+  2. querySelectorAll()
+     const myLiList = document.querySelectorAll('li') ==>  it returns Nodelist of all available 'li'.
+     myLiList[0].style.color = 'red' ==> ese use krna pdega / by accessing index number.
+
+     Can also use forEach
+            myLiList.forEach( val => { 
+                val.style.color = 'pink' 
+            })
+
+  3. getElementByClassName()
+     give all element having the same class name. retruns htmCollection.
+          getElementByClassName('list-item') ==> retuns htmlCollection
+
+    const tempClassList = document.getElementByClassName('list-item'); // return htmlCollection and it has no looping method
+    // but we convert this htmlCollection into an Array and do looping
+    
+    const convertedClassList = Array.from(tempClassList);
+    convertedClassList.forEach( function(li)  {
+            li.style.color = 'blue';
+        } )
+-->
